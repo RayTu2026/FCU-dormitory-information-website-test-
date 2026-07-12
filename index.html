@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>逢甲大學福星宿舍資訊指南 - 房型價格與試算比較</title>
+  <meta name="description" content="逢甲大學福星宿舍（大一可抽）單月租金估算、坪數與房型詳細指南。提供線上租金試算、多房型即時對比，協助您快速挑選最適合的宿舍房型。">
+  <meta name="keywords" content="逢甲大學, 福星宿舍, 宿舍價格, 宿舍坪數, 租金計算機, 宿舍比較, 大一宿舍">
+
+  <!-- FontAwesome 圖示庫 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- 載入自訂樣式 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- 頁首與標題區 -->
+    <header>
+      <div class="logo-area">
+        <h1><i class="fas fa-hotel"></i> 逢甲大學福星宿舍資訊指南</h1>
+        <p>逢甲福星宿舍單月價格估算表 (大一可抽房型整理)</p>
+      </div>
+      <button class="theme-toggle-btn" id="theme-toggle" aria-label="切換深淺色主題">
+        <i class="fas fa-moon"></i>
+        <span>深色模式</span>
+      </button>
+    </header>
+
+    <main>
+      <!-- 住宿期限重要公告 -->
+      <section class="period-banner" aria-label="住宿期限公告">
+        <div class="period-banner-icon">
+          <i class="fas fa-calendar-day"></i>
+        </div>
+        <div class="period-banner-content">
+          <h3><i class="fas fa-bullhorn"></i> 官方住宿期限公告</h3>
+          <div class="period-grid">
+            <div class="period-item">
+              <span class="period-label">福星 H、I 棟 (雅房)</span>
+              <span class="period-val">2026/08/29 (09:00) 至 2027/06/21 (12:00) 止</span>
+            </div>
+            <div class="period-item">
+              <span class="period-label">福星 G 棟 (套房/家庭房)</span>
+              <span class="period-val">2026/08/29 (09:00) 至 2027/08/16 (12:00) 止</span>
+            </div>
+            <div class="period-item highlight-period">
+              <span class="period-label">上學期期限 (各棟通用)</span>
+              <span class="period-val">2026/08/29 (09:00) 至 2027/01/13 (12:00) 止</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 數據概覽指標 (KPI Cards) -->
+      <section class="stats-grid" aria-label="宿舍數據概覽">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-coins"></i>
+          </div>
+          <div class="stat-info">
+            <div class="stat-val">NT$ 4,103</div>
+            <div class="stat-label">估算最低月租金 (四人雅房)</div>
+          </div>
+        </div>
+
+        <div class="stat-card accent-stat">
+          <div class="stat-icon">
+            <i class="fas fa-wallet"></i>
+          </div>
+          <div class="stat-info">
+            <div class="stat-val">NT$ 9,310</div>
+            <div class="stat-label">估算最高月租金 (五人家庭房)</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-door-open"></i>
+          </div>
+          <div class="stat-info">
+            <div class="stat-val">10 種</div>
+            <div class="stat-label">志願代碼房型可供選擇</div>
+          </div>
+        </div>
+
+        <div class="stat-card accent-stat">
+          <div class="stat-icon">
+            <i class="fas fa-expand-arrows-alt"></i>
+          </div>
+          <div class="stat-info">
+            <div class="stat-val">7 - 29 坪</div>
+            <div class="stat-label">多元室內空間大小</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 篩選與搜尋工具列 -->
+      <section class="toolbar-section" aria-label="房型篩選工具列">
+        <div class="toolbar-grid">
+          <!-- 關鍵字搜尋 -->
+          <div class="form-group">
+            <label for="search-input">搜尋房型</label>
+            <div class="search-wrapper">
+              <i class="fas fa-search search-icon"></i>
+              <input type="text" id="search-input" placeholder="輸入志願代碼或房型關鍵字 (例如: GF)...">
+            </div>
+          </div>
+
+          <!-- 房型分類快速標籤 -->
+          <div class="form-group">
+            <label>房型類別</label>
+            <div class="filter-tags" id="type-filter-tags">
+              <span class="filter-tag active" data-type="all">全部</span>
+              <span class="filter-tag" data-type="shared">雅房</span>
+              <span class="filter-tag" data-type="suite">套房</span>
+              <span class="filter-tag" data-type="family">家庭房</span>
+            </div>
+          </div>
+
+          <!-- 入住人數選擇 -->
+          <div class="form-group">
+            <label for="capacity-select">入住人數</label>
+            <div class="select-custom">
+              <select id="capacity-select">
+                <option value="all">不限人數</option>
+                <option value="2">2 人房</option>
+                <option value="4">4 人房</option>
+                <option value="5">5 人房</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- 排序條件 -->
+          <div class="form-group">
+            <label for="sort-select">結果排序</label>
+            <div class="select-custom">
+              <select id="sort-select">
+                <option value="priceAsc">價格：低到高</option>
+                <option value="priceDesc">價格：高到低</option>
+                <option value="sizeAsc">坪數：小到大</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 佈局切換與清單標題 -->
+      <div class="layout-switcher">
+        <h2 class="view-title">
+          <i class="fas fa-list-ul"></i> 宿舍房型列表
+          <span id="filtered-count-badge"></span>
+        </h2>
+        <div class="tab-buttons">
+          <button class="tab-btn active" id="btn-card-view">
+            <i class="fas fa-th-large"></i> 卡片視圖
+          </button>
+          <button class="tab-btn" id="btn-table-view">
+            <i class="fas fa-table"></i> 表格視圖
+          </button>
+        </div>
+      </div>
+
+      <!-- 卡片渲染區 -->
+      <section class="cards-grid" id="dorm-cards-container" aria-label="房型卡片清單"></section>
+
+      <!-- 表格渲染區 (預設隱藏) -->
+      <section class="table-container" id="dorm-table-container" style="display: none;" aria-label="房型詳細表格"></section>
+
+      <!-- 租金計算機區塊 -->
+      <section class="calculator-section" id="calculator-area" aria-label="租金線上計算機">
+        <div class="calc-inputs">
+          <h2 class="calc-title"><i class="fas fa-calculator" style="color: var(--primary);"></i> 租金估算計算機</h2>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 0.5rem;">
+            選擇您有興趣的房型與預計住宿期間，我們將為您算出完整費用與月均攤參考。
+          </p>
+
+          <div class="form-group">
+            <label for="calc-dorm-select">選擇房型</label>
+            <div class="select-custom">
+              <select id="calc-dorm-select"></select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="calc-period-select">住宿期間</label>
+            <div class="select-custom">
+              <select id="calc-period-select">
+                <option value="year">整學年定價 (約 9.7 個月)</option>
+                <option value="semester">僅住上學期 (約 4.5 個月)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="calc-outputs">
+          <div>
+            <div class="calc-row">
+              <span>基本住宿租金</span>
+              <span class="calc-val" id="calc-out-rent">NT$ 0</span>
+            </div>
+            <div class="calc-row">
+              <span>住宿保證金</span>
+              <span class="calc-val" id="calc-out-deposit">NT$ 2,000</span>
+            </div>
+            <div class="calc-row total">
+              <span>預估應繳總額</span>
+              <span class="calc-val" id="calc-out-total">NT$ 0</span>
+            </div>
+          </div>
+
+          <div class="installment-info" id="calc-installment-desc"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 頁尾宣告 -->
+    <footer>
+      <p>© 2026 逢甲大學福星宿舍資訊指南. All rights reserved.</p>
+      <p style="font-size: 0.8rem; margin-top: 0.4rem; opacity: 0.8;">※
+        本網站所列之價格、坪數及住宿期限等數據，僅供模擬試算參考，實際收費與期限請以校方最新官方公告為準。</p>
+      <div class="footer-links">
+        <a href="https://www.fcu.edu.tw/" target="_blank" rel="noopener">逢甲大學官網</a>
+        <a href="#" onclick="alert('本指南旨在提供便捷直觀的宿舍價格與配置對比服務，協助大一新生快速了解福星宿舍的方案。')">關於本站</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- 置底浮動對比面板 -->
+  <aside class="compare-sticky-panel" id="compare-panel" aria-label="房型對比欄">
+    <div class="compare-items-list">
+      <span class="compare-title"><i class="fas fa-columns" style="color: var(--primary); margin-right: 0.25rem;"></i>
+        房型比較欄：</span>
+      <div id="compare-bubbles-list" style="display: flex; gap: 0.5rem;"></div>
+    </div>
+    <div class="compare-actions">
+      <button class="btn btn-outline" onclick="clearCompare()">清除全部</button>
+      <button class="btn btn-primary" id="btn-trigger-compare" onclick="openCompareModal()">開始比較</button>
+    </div>
+  </aside>
+
+  <!-- 對比詳細彈出視窗 (Modal) -->
+  <div class="modal-overlay" id="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2><i class="fas fa-compress-alt" style="color: var(--accent); margin-right: 0.4rem;"></i> 房型詳細對比</h2>
+        <button class="modal-close-btn" id="modal-close" aria-label="關閉視窗">✕</button>
+      </div>
+      <div class="modal-body" id="modal-compare-body">
+        <!-- 比較表格將由 JS 動態生成 -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 載入自訂邏輯 -->
+  <script src="app.js"></script>
+</body>
+
+</html>
