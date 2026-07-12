@@ -14,7 +14,7 @@ const dormData = [
     size: "6 - 8",
     capacity: 4,
     bathroom: "public",
-    image: "double_suite.png",
+    image: "d4230999.jpg",
     desc: "福星 H 棟(女)及 I 棟(男)雅房。房內配置個人小冰箱、冷氣、化妝盥洗台，衛浴設備位於各樓層公共區域。I棟床位採膠囊拉簾設計，增加隱私性。",
     links: [
       { label: "男宿 I 棟實景", url: "https://dormitory.fcu.edu.tw/%e7%a6%8f%e6%98%9f%e7%94%b7%e5%ae%bf/" },
@@ -31,7 +31,7 @@ const dormData = [
     size: "12 - 14",
     capacity: 4,
     bathroom: "private",
-    image: "assets/quad_suite.png",
+    image: "d4230999.jpg",
     desc: "精采學舍(G棟)四人套房A。設有獨立衛浴、簡易廚房料理區（含微波爐、烤箱、電陶爐）。環境溫馨，採高床/書桌配置，附設陽台。",
     links: [{ label: "精采學舍 G 棟實景", url: "https://dormitory.fcu.edu.tw/%e7%b2%be%e9%87%87%e5%ad%b8%e8%88%8d/" }]
   },
@@ -45,7 +45,7 @@ const dormData = [
     size: "7 - 10",
     capacity: 2,
     bathroom: "private",
-    image: "assets/double_suite.png",
+    image: "d4230999.jpg",
     desc: "精采學舍(G棟)雙人套房B。設有獨立衛浴、簡易料理區（含微波爐、烤箱、電陶爐）。適合喜愛單純、安靜空間之住宿生選擇。",
     links: [{ label: "精采學舍 G 棟實景", url: "https://dormitory.fcu.edu.tw/%e7%b2%be%e9%87%87%e5%ad%b8%e8%88%8d/" }]
   },
@@ -59,7 +59,7 @@ const dormData = [
     size: "16 - 21",
     capacity: 4,
     bathroom: "private",
-    image: "assets/quad_suite.png",
+    image: "d4230999.jpg",
     desc: "精采學舍(G棟)四人套房B。比A款擁有更寬敞的室內起居空間，同樣配備獨立衛浴與完整小廚房（微波爐、電陶爐、烤箱）。",
     links: [{ label: "精采學舍 G 棟實景", url: "https://dormitory.fcu.edu.tw/%e7%b2%be%e9%87%87%e5%ad%b8%e8%88%8d/" }]
   },
@@ -73,7 +73,7 @@ const dormData = [
     size: "28 - 29",
     capacity: 4,
     bathroom: "private",
-    image: "assets/family_suite.png",
+    image: "d4230999.jpg",
     desc: "精采學舍(G棟)四人家庭房。格局包含專屬起居客廳、廚房中島、衛浴及獨立臥室空間。如家一般的溫馨同儕共享環境。",
     links: [{ label: "精采學舍 G 棟實景", url: "https://dormitory.fcu.edu.tw/%e7%b2%be%e9%87%87%e5%ad%b8%e8%88%8d/" }]
   },
@@ -87,7 +87,7 @@ const dormData = [
     size: "17 - 18",
     capacity: 4,
     bathroom: "private",
-    image: "assets/quad_suite.png",
+    image: "d4230999.jpg",
     desc: "精采學舍(G棟)四人套房C。坪數較大、採光極佳，內部配有獨立衛浴、微波爐、電陶爐、烤箱等基本家電與沙發起居區。",
     links: [{ label: "精采學舍 G 棟實景", url: "https://dormitory.fcu.edu.tw/%e7%b2%be%e9%87%87%e5%ad%b8%e8%88%8d/" }]
   },
@@ -101,7 +101,7 @@ const dormData = [
     size: "20",
     capacity: 4,
     bathroom: "private",
-    image: "assets/quad_suite.png",
+    image: "d4230999.jpg",
     desc: "精采學舍(G棟)四人套房D。大坪數寬裕套房，獨立衛浴、完整電器廚房配備，給予四位室友更完美的獨立學習與生活環境。",
     links: [{ label: "精采學舍 G 棟實景", url: "https://dormitory.fcu.edu.tw/%e7%b2%be%e9%87%87%e5%ad%b8%e8%88%8d/" }]
   },
@@ -115,7 +115,7 @@ const dormData = [
     size: "28",
     capacity: 4,
     bathroom: "private",
-    image: "assets/family_suite.png",
+    image: "d4230999.jpg",
     desc: "精采學舍(G棟)四人家庭房A。寬敞客廳格局與廚房配置，衛浴獨立，室友間彼此擁有舒適的共同交誼空間與獨立睡眠區。",
     links: [{ label: "精采學舍 G 棟實景", url: "https://dormitory.fcu.edu.tw/%e7%b2%be%e9%87%87%e5%ad%b8%e8%88%8d/" }]
   },
@@ -129,7 +129,7 @@ const dormData = [
     size: "28 - 29",
     capacity: 5,
     bathroom: "private",
-    image: "assets/family_suite.png",
+    image: "d4230999.jpg",
     desc: "精采學舍(G棟)五人家庭房（特色樓中樓格局）。配有大型家庭客廳、共用廚房設施、獨立衛浴、以及寬敞明亮的臥室。",
     links: [{ label: "精采學舍 G 棟實景", url: "https://dormitory.fcu.edu.tw/%e7%b2%be%e9%87%87%e5%ad%b8%e8%88%8d/" }]
   }
