@@ -14,7 +14,7 @@ const dormData = [
     size: "6 - 8",
     capacity: 4,
     bathroom: "public",
-    image: "assets/quad_dorm_shared.png",
+    image: "double_suite.png",
     desc: "福星 H 棟(女)及 I 棟(男)雅房。房內配置個人小冰箱、冷氣、化妝盥洗台，衛浴設備位於各樓層公共區域。I棟床位採膠囊拉簾設計，增加隱私性。",
     links: [
       { label: "男宿 I 棟實景", url: "https://dormitory.fcu.edu.tw/%e7%a6%8f%e6%98%9f%e7%94%b7%e5%ae%bf/" },
