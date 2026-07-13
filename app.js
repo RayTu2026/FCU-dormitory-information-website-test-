@@ -21,7 +21,7 @@ const dormData = [
 
    {
     id: "A",
-    name: "四人雅房 (I棟/H棟北)",
+    name: "四人雅房 (I棟)",
     priceYear: 39800,
     priceSem: 29850,
     priceMonth: 4103,
